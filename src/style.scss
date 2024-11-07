@@ -1,0 +1,18 @@
+@import 'variables';
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 14px;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  color: $color-text;
+  background: white;
+}
+a {
+  list-style: none;
+  text-decoration: none;
+  list-style-type: none;
+}
