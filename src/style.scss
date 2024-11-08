@@ -1,7 +1,10 @@
 @import './styles/variables';
 @import './styles/header';
 @import './styles/slider';
-
+@import './styles/catalog';
+@import './styles/product';
+@import './styles/select';
+@import './styles/filter';
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -21,4 +24,32 @@ a {
 }
 .container {
   max-width: 1920px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+footer {
+  background-color: black;
+  height: 100px;
+  width: 100%;
+  margin-top: 140px;
+}
+
+.mobile-title {
+  display: none;
+}
+.mobile-title h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-left: 24px;
+}
+
+@media (max-width: 768px) {
+  .mobile-title {
+    display: block;
+  }
+  .container {
+    max-width: 768px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }

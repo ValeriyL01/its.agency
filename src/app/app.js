@@ -1,9 +1,13 @@
-import createElement from './components/createElement';
 import { swiperСontrol } from './js/slider';
+import { initialize } from './components/product';
+import { sortProduct } from './components/select';
+import { filterProductByCheckbox } from './components/filter';
+import { initFilters } from './components/popupFilter';
 
-const container = createElement('div', 'container');
 export default function renderApp() {
-  document.body.append(container);
-  container.append();
   swiperСontrol();
+  initialize();
+  sortProduct();
+  filterProductByCheckbox();
+  initFilters();
 }

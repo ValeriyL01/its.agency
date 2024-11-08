@@ -71,3 +71,8 @@ p {
 #next-slide:hover {
   color: #1f2020;
 }
+@media (max-width: 768px) {
+  .swiper-container {
+    display: none;
+  }
+}

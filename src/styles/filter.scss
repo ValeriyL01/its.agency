@@ -1,0 +1,116 @@
+@import 'variables';
+
+.filter__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px;
+  user-select: none;
+}
+
+.filter__checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 36px;
+  height: 22px;
+  border-radius: 50px;
+  background: linear-gradient(to bottom, #f2f2f2, #f2f2f2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: $color-text;
+  position: relative;
+}
+
+.filter__checkbox span {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: $color-text;
+  white-space: nowrap;
+}
+
+.filter__checkbox-label::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #1f2020;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  margin-left: 5px;
+}
+
+.filter__checkbox-input:checked + .filter__checkbox-label {
+  background: linear-gradient(to bottom, #7bb899, #7bb899);
+}
+
+.filter__checkbox-input:checked + .filter__checkbox-label::after {
+  transform: translateX(18px);
+}
+
+.filter__checkbox-label:hover {
+  background: linear-gradient(to bottom, #b3b3b3, #e6e6e6);
+}
+
+.filter__checkbox-label:hover::after {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.filter__checkbox-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 22px;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .catalog__filter {
+    display: none;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.filter-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 30;
+  transition: transform 0.3s ease;
+  transform: translateY(100%);
+}
+.filter-popup__rectangle {
+  width: 28px;
+  height: 4px;
+  background-color: #1f2020;
+  opacity: 60%;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+.filter-popup.show {
+  transform: translateY(0);
+}

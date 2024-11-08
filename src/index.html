@@ -3,17 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link 
-    rel="stylesheet" 
-    href="https://unpkg.com/swiper/swiper-bundle.min.css"
-  />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    
+
     <link rel="icon" sizes="180x180" href="./assets/images/favicon.png" />
     <title>its.agency</title>
   </head>
@@ -66,6 +63,9 @@
         </div>
       </div>
     </header>
+     <div class="mobile-title">
+      <h2>Краски</h2>
+    </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide" >
@@ -97,6 +97,59 @@
       <button id="next-slide"></button>
       
     </div>
+    
+    <div class="catalog container">
+      <div class="filter-popup">
+        <div class="filter-popup__rectangle"></div>
+        <div class="filter">
+          <div class="filter__checkbox">
+            <input class="filter__checkbox-input" id="check-popup-new" type="checkbox" />
+            <label class="filter__checkbox-label" for="check-popup-new"></label>
+            <span>Новинки</span>
+          </div>
+
+          <div class="filter__checkbox">
+            <input class="filter__checkbox-input" id="check-popup-stock" type="checkbox" />
+            <label class="filter__checkbox-label" for="check-popup-stock"></label>
+            <span>Есть в наличии</span>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__filter">
+      
+        <div class="filter">
+          <div class="filter__checkbox">
+            <input class="filter__checkbox-input" id="check-apple" type="checkbox" />
+            <label class="filter__checkbox-label" for="check-apple"></label>
+            <span>Новинки</span>
+          </div>
+
+          <div class="filter__checkbox">
+            <input class="filter__checkbox-input" id="check-orange" type="checkbox" />
+            <label class="filter__checkbox-label" for="check-orange"></label>
+            <span>Есть в наличии</span>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__container">
+        <div class="catalog__quantity-select">
+          <div class="catalog__mobile-filter"><span>Фильтры</span></div>
+          <div class="catalog__quantity"></div>
+          <div class="custom-select">
+            <div class="custom-select__container">
+              <select id="sort-select" class="custom-select__select">
+                <option value="asc" class="custom-select__option">Сначала недорогие</option>
+                <option value="desc" class="custom-select__option">Сначала дорогие</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="products-container"></div>
+      </div>
+    </div>
+   
+    <footer></footer>
+    <div id="overlay" class="overlay"></div>
    
   </body>
 </html>
