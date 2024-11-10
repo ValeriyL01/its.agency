@@ -18,14 +18,14 @@
   background: linear-gradient(to bottom, #f2f2f2, #f2f2f2);
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 1.2rem;
+  font-size: $font-size-medium;
   font-weight: 300;
   color: $color-text;
   position: relative;
 }
 
 .filter__checkbox span {
-  font-size: 1.2rem;
+  font-size: $font-size-medium;
   font-weight: 400;
   color: $color-text;
   white-space: nowrap;

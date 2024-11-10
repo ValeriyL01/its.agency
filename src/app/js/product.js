@@ -1,6 +1,6 @@
 import createElement from './createElement.js';
 import { fetchProducts } from '../../api/mockAPI.js';
-import { store } from '../js/store.js';
+import { store } from './store.js';
 import { addToCart, renderQuantityProduct } from './productInCart.js';
 
 const handleAddToCartClick = (product) => {
@@ -30,7 +30,6 @@ export const createProductComponent = (product) => {
 export const renderProducts = (products) => {
   const productsContainer = document.getElementById('products-container');
   productsContainer.innerHTML = '';
-
   products.forEach((product) => {
     const productComponent = createProductComponent(product);
     productsContainer.append(productComponent);

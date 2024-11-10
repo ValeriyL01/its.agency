@@ -1,5 +1,5 @@
 import { renderProducts } from './product.js';
-import { store } from '../js/store.js';
+import { store } from './store.js';
 
 export const filterProducts = () => {
   const isNewChecked = document.getElementById('check-apple').checked;

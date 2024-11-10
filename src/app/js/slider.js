@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 
 export const swiperСontrol = () => {
-  const swiper = new Swiper('.swiper-container', {
+  const swiper = new Swiper('.swiper', {
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',

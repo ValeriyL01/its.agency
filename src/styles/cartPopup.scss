@@ -1,10 +1,11 @@
+@import 'variables';
 .cart-popup {
   position: fixed;
   top: 0;
   right: 0;
   width: 600px;
   height: 100%;
-  background-color: white;
+  background-color: $color-background;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
   z-index: 30;
   transition: transform 0.3s ease;
@@ -28,22 +29,21 @@
 
     flex-direction: column;
   }
-  &__title-close {
+  &__title-close-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   &__title {
     font-weight: 500;
-    font-size: 2.1rem;
-    margin-top: 0;
-    margin-bottom: 0;
+    font-size: $font-size-large;
+    margin: 0 0;
   }
   &__close-button {
     background-image: url('../assets/icons/x.svg');
     background-repeat: no-repeat;
     background-position: center;
-    color: #1f2020;
+    color: $color-text;
     border: 1px solid #b5b5b5;
 
     border-radius: 50%;
@@ -51,33 +51,32 @@
     height: 48px;
     cursor: pointer;
   }
-  &__quantity-clear {
+  &__quantity-clear-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 94px;
-    flex: 0 1 auto;
+    font-size: $font-size-small;
   }
   &__quantity {
     font-weight: 400;
-    font-size: 1rem;
   }
   &__clear {
     font-weight: 300;
-    font-size: 1rem;
+
     opacity: 40%;
     cursor: pointer;
   }
-  &__total-order {
+  &__total-container {
     display: flex;
     justify-content: space-between;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: $font-size-small;
     margin-top: 20px;
   }
   &__total {
     font-weight: 500;
-    font-size: 2.1rem;
+    font-size: $font-size-large;
     margin-top: 0px;
     margin-bottom: 0px;
   }
@@ -85,9 +84,9 @@
     width: 240px;
     height: 56px;
     font-weight: 500;
-    font-size: 1rem;
-    background-color: #7bb899;
-    color: #1f2020;
+    font-size: $font-size-small;
+    background-color: $color-accent;
+    color: $color-text;
     border-radius: 4px;
     border: none;
     cursor: pointer;
