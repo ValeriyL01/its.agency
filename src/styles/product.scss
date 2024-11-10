@@ -2,14 +2,12 @@
 .product {
   &__item {
     width: 278px;
-    height: 370px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    height: 386px;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-items: flex-start;
     position: relative;
-    transition: transform 0.3s ease-in-out;
 
     &:hover {
       .product__button {
@@ -61,17 +59,18 @@
       opacity 0.3s ease,
       background-color 0.3s ease;
   }
+  &__rectangle {
+    margin-top: 10px;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+
+    opacity: 10%;
+  }
   @media (max-width: 768px) {
     &__item {
       width: 156px;
-      height: 270px;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-items: flex-start;
-      position: relative;
-      transition: transform 0.3s ease-in-out;
+      height: 280px;
     }
     &__image {
       height: 156px;
@@ -82,5 +81,8 @@
       opacity: 1;
       background-color: #f2f2f2;
     }
+  }
+  &__rectangle {
+    margin-top: 5px;
   }
 }

@@ -1,7 +1,12 @@
 import createElement from './createElement.js';
 import { fetchProducts } from '../../api/mockAPI.js';
+import { store } from '../js/store.js';
+import { addToCart, renderQuantityProduct } from './productInCart.js';
 
-export const productsCache = [];
+const handleAddToCartClick = (product) => {
+  addToCart(product);
+};
+
 export const createProductComponent = (product) => {
   const productWrapper = createElement('div', 'product__item');
 
@@ -11,9 +16,13 @@ export const createProductComponent = (product) => {
   const addToCartButton = createElement('button', 'product__button', '+', {
     'data-id': product.id,
   });
+
   const priceAddToCartButtonContainer = createElement('div', 'product__price-Button-container');
-  productWrapper.append(img, name, priceAddToCartButtonContainer);
+  const rectangle = createElement('div', 'product__rectangle');
+  productWrapper.append(img, name, priceAddToCartButtonContainer, rectangle);
   priceAddToCartButtonContainer.append(price, addToCartButton);
+
+  addToCartButton.addEventListener('click', () => handleAddToCartClick(product));
 
   return productWrapper;
 };
@@ -28,15 +37,10 @@ export const renderProducts = (products) => {
   });
 };
 
-const renderQuantityProduct = () => {
-  const quantity = document.querySelector('.catalog__quantity');
-  quantity.innerHTML = `${productsCache.length} товаров`;
-};
-
 export const initialize = async () => {
   const products = await fetchProducts();
-  productsCache.length = 0;
-  productsCache.push(...products);
-  renderProducts(productsCache);
+  store.productsCache.length = 0;
+  store.productsCache.push(...products);
+  renderProducts(store.productsCache);
   renderQuantityProduct();
 };

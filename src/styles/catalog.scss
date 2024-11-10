@@ -1,6 +1,7 @@
 #products-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 18px;
   margin-top: 44px;
 }
@@ -10,10 +11,13 @@
   margin-top: 72px;
   &__container {
     display: inline-block;
+    width: 100%;
   }
   &__quantity-select {
     display: flex;
     justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   &__quantity {
     display: flex;
@@ -36,6 +40,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    &__quantity-select {
+      padding-left: 0px;
+      padding-right: 0px;
     }
     #products-container {
       align-items: center;

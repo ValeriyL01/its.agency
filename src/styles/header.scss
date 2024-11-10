@@ -66,7 +66,12 @@
       color: #0056b3;
     }
   }
-
+  &__tel-link div {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 40%;
+    color: #1f2020;
+  }
   &__icons {
     display: flex;
     align-items: center;
@@ -83,6 +88,7 @@
     background-color: #7bb899;
     border-radius: 50%;
     color: $color-text;
+    cursor: pointer;
   }
   &__btn {
     display: none;

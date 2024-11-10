@@ -47,7 +47,8 @@
           </nav>
         </div>
         <div class="header__tel-icons">
-          <a href="tel:+7 (495) 221-77-69" class="header__tel-link">+7 (495) 221-77-69</a>
+          <a href="tel:+7 (495) 221-77-69" class="header__tel-link">+7 (495) 221-77-69 <div >Заказать звонок</div></a>
+         
           <div class="header__icons">
             <a href="#" class="header__icon">
               <img src="./assets/icons/search.svg" alt="Поиск" class="header__icon-img" />
@@ -58,7 +59,7 @@
             <a href="#" class="header__icon">
               <img src="./assets/icons/heart.svg" alt="Избранное" class="header__icon-img" />
             </a>
-            <a href="#" class="header__icon header__icon-basket">1</a>
+            <span  class="header__icon header__icon-basket">0</span>
           </div>
         </div>
       </div>
@@ -147,7 +148,30 @@
         <div id="products-container"></div>
       </div>
     </div>
-   
+   <div class="cart-popup">
+    <div class="cart-popup__container">
+      <div>
+      <div class="cart-popup__title-close">
+      <h3 class="cart-popup__title">Корзина</h3>
+      <div class="cart-popup__close-button"></div>
+      </div>
+      <div class="cart-popup__quantity-clear">
+        <h3 class="cart-popup__quantity">товара</h3>
+        <div class="cart-popup__clear">Очистить список</div>
+        </div>
+      
+         <div class="cart-container"></div>
+        </div>
+         <div class="cart-popup__total-order">
+          <div>
+            <span >Итого</span>
+            <h2 class="cart-popup__total">12133</h2>
+          </div>
+         
+          <button class="cart-popup__order-button">Оформить заказ</button>
+          </div>
+    </div>
+   </div>
     <footer></footer>
     <div id="overlay" class="overlay"></div>
    

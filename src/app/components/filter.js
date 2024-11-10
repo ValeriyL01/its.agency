@@ -1,11 +1,12 @@
-import { renderProducts, productsCache } from './product.js';
+import { renderProducts } from './product.js';
+import { store } from '../js/store.js';
 
 export const filterProducts = () => {
   const isNewChecked = document.getElementById('check-apple').checked;
   const inStockChecked = document.getElementById('check-orange').checked;
   const isNewCheckedPopup = document.getElementById('check-popup-new').checked;
   const inStockCheckedPopup = document.getElementById('check-popup-stock').checked;
-  let filteredProducts = [...productsCache];
+  let filteredProducts = [...store.productsCache];
   if (isNewChecked || isNewCheckedPopup) {
     filteredProducts = filteredProducts.filter((product) => product.isNew);
   }
