@@ -115,6 +115,7 @@ export const renderCart = () => {
         store.cart = store.cart.filter((item) => item.id !== product.id);
         store.removedProducts.push(product);
         renderCart();
+        renderQuantityProduct();
       }
     });
   });
@@ -139,6 +140,7 @@ export const renderCart = () => {
         store.cart.push(product);
         store.removedProducts = store.removedProducts.filter((item) => item.id !== product.id);
         renderCart();
+        renderQuantityProduct();
       }
     });
   });
