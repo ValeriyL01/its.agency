@@ -1,0 +1,144 @@
+@import 'variables';
+
+.header {
+  padding: 45px 64px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-nav {
+    display: flex;
+    gap: 172px;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+  }
+
+  &__logo-img {
+    width: 100px;
+    height: auto;
+  }
+
+  &__nav {
+    .header__nav-list {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header__nav-item {
+      margin: 0;
+    }
+
+    .header__nav-link {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #0056b3;
+      }
+    }
+  }
+
+  &__tel-icons {
+    display: flex;
+    gap: 116px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__tel-link {
+    font-size: $font-size-medium;
+    font-weight: 500;
+    color: $color-text;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+  &__tel-link div {
+    font-size: $font-size-small;
+    font-weight: 400;
+    opacity: 40%;
+    color: #1f2020;
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  &__icon-basket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: #7bb899;
+    border-radius: 50%;
+    color: $color-text;
+    cursor: pointer;
+  }
+  &__btn {
+    display: none;
+    position: relative;
+    z-index: 20;
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  &__btn-item {
+    display: none;
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 16px;
+    left: 14px;
+    background: #403f3d;
+    border-radius: 2px;
+  }
+  &__btn-item:nth-child(1) {
+    top: 16px;
+  }
+  &__btn-item:nth-child(2) {
+    top: 22px;
+  }
+  &__btn-item:nth-child(3) {
+    top: 28px;
+  }
+  @media (max-width: 1350px) {
+    &__nav,
+    &__tel-link,
+    &__icon {
+      display: none;
+    }
+
+    &__icon-basket {
+      display: flex;
+    }
+    &__btn {
+      display: block;
+    }
+    &__btn-item {
+      display: block;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 45px 24px;
+  }
+}

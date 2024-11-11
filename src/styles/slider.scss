@@ -1,0 +1,79 @@
+@import 'variables';
+.swiper {
+  width: 100%;
+  height: 560px;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.swiper-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  color: #fff;
+  flex-shrink: 0;
+  transition: transform 0.5s ease-in-out;
+  background-image: url('../assets/images/Rectangle\ 645.png');
+}
+
+.slide-content {
+  text-align: center;
+  max-width: 80%;
+  color: #fff;
+}
+
+h2 {
+  font-size: 72px;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: $font-size-medium;
+}
+
+#prev-slide,
+#next-slide {
+  color: $color-background;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  transition: background-color 0.3s;
+  background-size: 45px 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+#prev-slide {
+  left: 20px;
+  background-image: url('../assets/icons/Vector.svg');
+}
+
+#next-slide {
+  right: 20px;
+  background-image: url('../assets/icons/Vector.svg');
+  transform: rotate(180deg);
+}
+#prev-slide:hover,
+#next-slide:hover {
+  color: #1f2020;
+}
+@media (max-width: 768px) {
+  .swiper {
+    display: none;
+  }
+}

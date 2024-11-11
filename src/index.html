@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" sizes="180x180" href="./assets/images/favicon.png" />
+    <title>its.agency</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__btn">
+          <span class="header__btn-item"></span>
+          <span class="header__btn-item"></span>
+          <span class="header__btn-item"></span>
+        </div>
+        <div class="header__logo-nav">
+          <a href="#" class="header__logo">
+            <img src="./assets/icons/Frame 37.png" alt="Логотип" class="header__logo-img" />
+          </a>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Продукты</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Цвета</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Вдохновение</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Советы</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Найти магазин</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__tel-icons">
+          <a href="tel:+7 (495) 221-77-69" class="header__tel-link">+7 (495) 221-77-69 <div >Заказать звонок</div></a>
+         
+          <div class="header__icons">
+            <a href="#" class="header__icon">
+              <img src="./assets/icons/search.svg" alt="Поиск" class="header__icon-img" />
+            </a>
+            <a href="#" class="header__icon">
+              <img src="./assets/icons/profile.svg" alt="Профиль" class="header__icon-img" />
+            </a>
+            <a href="#" class="header__icon">
+              <img src="./assets/icons/heart.svg" alt="Избранное" class="header__icon-img" />
+            </a>
+            <span  class="header__icon header__icon-basket">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+     <div class="mobile-title">
+      <h2>Краски</h2>
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" >
+          
+          <div class="slide-content">
+            <h2>Краски</h2>
+            <br>Идеально подходят для стен и других поверхностей.<br> Найди свой идеальный цвет!</br></p>
+          </div>
+        </div>
+
+        <div class="swiper-slide" >
+         
+          <div class="slide-content">
+            <h2>Title 2</h2>
+            <p>Description for slide 2.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide" >
+          
+          <div class="slide-content">
+            <h2>Title 3</h2>
+            <p>Description for slide 3.</p>
+          </div>
+        </div>
+      </div>
+
+      <button id="prev-slide"></button>
+      <button id="next-slide"></button>
+      
+    </div>
+    
+    <div class="catalog container">
+      <div class="filter-popup">
+        <div class="filter-popup__rectangle"></div>
+        <div class="filter">
+          <div class="filter__checkbox">
+            <input class="filter__checkbox-input" id="check-popup-new" type="checkbox" />
+            <label class="filter__checkbox-label" for="check-popup-new"></label>
+            <span>Новинки</span>
+          </div>
+
+          <div class="filter__checkbox">
+            <input class="filter__checkbox-input" id="check-popup-stock" type="checkbox" />
+            <label class="filter__checkbox-label" for="check-popup-stock"></label>
+            <span>Есть в наличии</span>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__filter">
+      
+        <div class="filter">
+          <div class="filter__checkbox">
+            <input class="filter__checkbox-input" id="check-apple" type="checkbox" />
+            <label class="filter__checkbox-label" for="check-apple"></label>
+            <span>Новинки</span>
+          </div>
+
+          <div class="filter__checkbox">
+            <input class="filter__checkbox-input" id="check-orange" type="checkbox" />
+            <label class="filter__checkbox-label" for="check-orange"></label>
+            <span>Есть в наличии</span>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__container">
+        <div class="catalog__quantity-select">
+          <div class="catalog__mobile-filter"><span>Фильтры</span></div>
+          <div class="catalog__quantity"></div>
+          <div class="custom-select">
+            <div class="custom-select__container">
+              <select id="sort-select" class="custom-select__select">
+                <option value="asc" class="custom-select__option">Сначала недорогие</option>
+                <option value="desc" class="custom-select__option">Сначала дорогие</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="products-container"></div>
+      </div>
+    </div>
+   <div class="cart-popup">
+    <div class="cart-popup__container">
+      <div>
+      <div class="cart-popup__title-close-container">
+      <h3 class="cart-popup__title">Корзина</h3>
+      <div class="cart-popup__close-button"></div>
+      </div>
+      <div class="cart-popup__quantity-clear-container">
+        <h3 class="cart-popup__quantity">товара</h3>
+        <div class="cart-popup__clear">Очистить список</div>
+        </div>
+      
+         <div class="cart-container"></div>
+        </div>
+         <div class="cart-popup__total-container">
+          <div>
+            <span >Итого</span>
+            <h2 class="cart-popup__total">12133</h2>
+          </div>
+         
+          <button class="cart-popup__order-button">Оформить заказ</button>
+          </div>
+    </div>
+   </div>
+    <footer></footer>
+    <div id="overlay" class="overlay"></div>
+   
+  </body>
+</html>
